@@ -44,17 +44,22 @@ npm remove -g check-wordpress
 ```
 to uninstall package from the npm global dependencies
 
-Also you can run app with a random link with Makefile
-
-```sh
-make check link=google.com
-```
-
 ### Executing program
 
-You can run the project with:
+You can run the project with (in every case – without square brackets):
+
 ```sh
-make check_wordpress_cms [filePath1] [filePath2]
+make check link=[link]
+```
+or just executing the file itself
+
+```sh
+bin/checkWordpress.js [link]
 ```
 
+or with command line if you install the package globally
+
+```sh
+check-wordpress [link]
+```
 ___
