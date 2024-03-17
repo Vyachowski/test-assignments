@@ -2,4 +2,4 @@
 
 1) A command line tool to check if site was made with WordPress
 
-[Go to the project](*check_wordpress_cms_cli*)
+[Go to the project](https://github.com/Vyachowski/test-tasks/tree/main/check_wordpress_cms_cli)
