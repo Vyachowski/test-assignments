@@ -39,11 +39,12 @@ const hasWPScripts = async () => {
   return scriptFileNames.some(name => name.includes('wp-content'));
 }
 
-console.log(await hasWPScripts());
 const hasSpecialDisallowRule = () => {
 
 }
 
-// const hasSpecialCookie = () => {
+const isWordpress = () => {
+  return true;
+}
 
-// }
+export default isWordpress;
