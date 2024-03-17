@@ -1,0 +1,16 @@
+{
+  "name": "check-wordpress-cms-cli",
+  "version": "1.0.0",
+  "description": "A small command line tool to check if site was made with a wordpress",
+  "main": "src/index.js",
+    "type": "module",
+    "bin": {
+      "checkCms": "bin/checkCms.js"
+    },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
