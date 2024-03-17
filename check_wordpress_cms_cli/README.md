@@ -1,12 +1,8 @@
-# Hexlet JS Project – JSON Difference generator
-![Cover image for project](https://github.com/Vyachowski/frontend-project-46/blob/main/cover.png)
-This project is centered around concepts like higher-order functions, recursion, and configuring the environment.
-
-Чтобы читать **Readme на русском**  перейдите по [этой ссылке](https://github.com/Vyachowski/frontend-project-46/blob/main/README_ru.md)
+# Test task for .wrk
 
 ## Description
 
-Library and CLI application for comparing JSON structures, providing a seamless way to visualize and analyze differences.
+Library and CLI application for checking is a website was made with WordPress.
 
 ## Getting Started
 
@@ -17,17 +13,7 @@ Library and CLI application for comparing JSON structures, providing a seamless 
 
 ### Installing
 
-* Clone a GitHub repository via
-
-```sh
-git clone https://github.com/Vyachowski/frontend-project-46.git
-```
-
-or
-
-```sh
-git clone git@github.com:Vyachowski/frontend-project-46.git
-```
+* Clone a GitHub files
 
 * Run in a root directory of the project
 ```sh
