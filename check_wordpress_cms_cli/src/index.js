@@ -1,4 +1,5 @@
 import { URL } from 'node:url';
+import { JSDOM } from 'jsdom';
 
 const normalizeLink = (link) => {
   const normalizedLink = link.toLowerCase()
@@ -10,19 +11,35 @@ const normalizeLink = (link) => {
 
 const normalizedLink = normalizeLink('https://vyachowski.wordpress.com');
 
-const hasWpAdminPanel = async () => {
+const fetchData = async (url) => {
+  try {
+    return await fetch(url);
+  } catch(e) {
+    console.log(e);
+  }
+}
+
+const hasWPAdminPanel = async () => {
   const adminPageUrl = new URL('/wp-admin/', normalizedLink).href;
-  const result = await fetch(adminPageUrl);
-
-  return (result.status === 200);
+  const response = await fetchData(adminPageUrl);
+  return (response.status === 200);
 }
 
-console.log(await hasWpAdminPanel());
+const hasWPScripts = async () => {
+  const response  = await fetchData(normalizedLink);
+  const html = await response.text();
 
-const hasWpScripts = () => {
+  const { document } = (new JSDOM(html)).window;
+  const scripts = document.querySelectorAll('script');
 
+  const scriptFileNames = Array
+    .from(scripts)
+    .map(script => script.src)
+    .filter(name => name !== '');
+  return scriptFileNames.some(name => name.includes('wp-content'));
 }
 
+console.log(await hasWPScripts());
 const hasSpecialDisallowRule = () => {
 
 }
