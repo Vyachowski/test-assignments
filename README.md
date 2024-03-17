@@ -1,4 +1,4 @@
-# All test tasks from the companies that I applied for
+# All test assignments from the companies that I applied for
 
 1) Goal: Create a command line tool to check if site was made with WordPress
 
