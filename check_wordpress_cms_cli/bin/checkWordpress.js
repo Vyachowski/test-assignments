@@ -8,6 +8,10 @@ program
   .version('1.0.0')
   .argument('<link>', 'link to the checking domain')
   .action((link) => {
-    console.log(isWordpress(link));
+    console.log(
+      ${isWordpress(link)}
+      ? `${link} was made with WordpPess`
+      : `${link} was NOT made with WordpPess`
+    );
   })
   .parse(process.argv);
