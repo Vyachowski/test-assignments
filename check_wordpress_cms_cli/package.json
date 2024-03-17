@@ -1,5 +1,5 @@
 {
-  "name": "check-wordpress-cms-cli",
+  "name": "check-wordpress",
   "version": "1.0.0",
   "description": "A small command line tool to check if site was made with WordPress",
   "main": "src/index.js",

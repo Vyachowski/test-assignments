@@ -9,13 +9,7 @@ const normalizeLink = (link) => {
   return `http://${normalizedLink}`;
 }
 
-const fetchData = async (url) => {
-  try {
-    return await fetch(url);
-  } catch(e) {
-    console.log(e);
-  }
-}
+const fetchData = async (url) => await fetch(url);
 
 const hasWPAdminPanel = async (link) => {
   const adminPageUrl = new URL('/wp-admin/', link).href;
@@ -50,12 +44,12 @@ const hasWPRobotRules = async (link) => {
 }
 
 const hasWordPress = async (link) => {
-  const normalizedLink = normalizeLink(link);
+    const normalizedLink = normalizeLink(link);
 
-  const results = await Promise.all([hasWPAdminPanel(normalizedLink), hasWPScripts(normalizedLink), hasWPRobotRules(normalizedLink)]);
-  const successfulIndicatorsCount = results.filter(result => result === true).length;
+    const results = await Promise.all([hasWPAdminPanel(normalizedLink), hasWPScripts(normalizedLink), hasWPRobotRules(normalizedLink)]);
+    const successfulIndicatorsCount = results.filter(result => result === true).length;
 
-  return (successfulIndicatorsCount >= 2);
+    return (successfulIndicatorsCount >= 2);
 }
 
 export default hasWordPress;

@@ -40,9 +40,15 @@ npm link
 to run project via command line easily
 * After your work with a project you can perform
 ```sh
-npm remove -g @hexlet/code
+npm remove -g check-wordpress
 ```
 to uninstall package from the npm global dependencies
+
+Also you can run app with a random link with Makefile
+
+```sh
+make check link=google.com
+```
 
 ### Executing program
 
