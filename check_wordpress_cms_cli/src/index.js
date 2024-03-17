@@ -7,9 +7,7 @@ const normalizeLink = (link) => {
     ? new URL(link).hostname
     : new URL(`http://${link}`).hostname
   return `http://${normalizedLink}`;
-};
-
-const normalizedLink = normalizeLink('https://vyachowski.wordpress.com');
+}
 
 const fetchData = async (url) => {
   try {
@@ -39,21 +37,24 @@ const hasWPScripts = async (link) => {
   return scriptFileNames.some(name => name.includes('wp-content') || name.includes('wp-includes'));
 }
 
-const hasSpecialDisallowRule = async (link) => {
+const hasWPRobotRules = async (link) => {
   const robotsPageUrl = new URL('/robots.txt', link).href;
   const response = await fetchData(robotsPageUrl);
 
   if (response.status === 200) {
     const robotsText = await response.text();
     return robotsText.includes('wp-admin');
-  };
+  }
 
   return false;
 }
 
-const isWordpress = () => {
-  return true;
+const hasWordPress = async (link) => {
+  const normalizedLink = normalizeLink(link);
+  const results = await Promise.all([hasWPAdminPanel(normalizedLink), hasWPScripts(normalizedLink), hasWPRobotRules(normalizedLink)]);
+  const successfulIndicatorsCount = results.filter(result => result === true).length;
+
+  return (successfulIndicatorsCount >= 2);
 }
 
-export default isWordpress;
-console.log(await hasSpecialDisallowRule(normalizedLink));
+export default hasWordPress;

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { program } from 'commander';
-import isWordpress from '../src/index.js';
+import hasWordpress from '../src/index.js';
 
 program
   .name('checkWordpress')
@@ -8,7 +8,7 @@ program
   .version('1.0.0')
   .argument('<link>', 'link to the checking domain')
   .action((link) => {
-    const resultMessage = isWordpress(link)
+    const resultMessage = hasWordpress(link)
     ? `${link} was made with WordpPess`
     : `${link} was NOT made with WordpPess`
 
