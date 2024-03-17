@@ -51,6 +51,7 @@ const hasWPRobotRules = async (link) => {
 
 const hasWordPress = async (link) => {
   const normalizedLink = normalizeLink(link);
+
   const results = await Promise.all([hasWPAdminPanel(normalizedLink), hasWPScripts(normalizedLink), hasWPRobotRules(normalizedLink)]);
   const successfulIndicatorsCount = results.filter(result => result === true).length;
 
