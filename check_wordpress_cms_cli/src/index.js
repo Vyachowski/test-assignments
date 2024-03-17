@@ -19,14 +19,14 @@ const fetchData = async (url) => {
   }
 }
 
-const hasWPAdminPanel = async () => {
-  const adminPageUrl = new URL('/wp-admin/', normalizedLink).href;
+const hasWPAdminPanel = async (link) => {
+  const adminPageUrl = new URL('/wp-admin/', link).href;
   const response = await fetchData(adminPageUrl);
   return (response.status === 200);
 }
 
-const hasWPScripts = async () => {
-  const response  = await fetchData(normalizedLink);
+const hasWPScripts = async (link) => {
+  const response  = await fetchData(link);
   const html = await response.text();
 
   const { document } = (new JSDOM(html)).window;
@@ -36,11 +36,19 @@ const hasWPScripts = async () => {
     .from(scripts)
     .map(script => script.src)
     .filter(name => name !== '');
-  return scriptFileNames.some(name => name.includes('wp-content'));
+  return scriptFileNames.some(name => name.includes('wp-content') || name.includes('wp-includes'));
 }
 
-const hasSpecialDisallowRule = () => {
+const hasSpecialDisallowRule = async (link) => {
+  const robotsPageUrl = new URL('/robots.txt', link).href;
+  const response = await fetchData(robotsPageUrl);
 
+  if (response.status === 200) {
+    const robotsText = await response.text();
+    return robotsText.includes('wp-admin');
+  };
+
+  return false;
 }
 
 const isWordpress = () => {
@@ -48,3 +56,4 @@ const isWordpress = () => {
 }
 
 export default isWordpress;
+console.log(await hasSpecialDisallowRule(normalizedLink));
