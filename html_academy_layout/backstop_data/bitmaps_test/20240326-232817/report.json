@@ -1,0 +1,105 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../../test-js/component-2/reference/form-validation_31.png",
+        "test": "../bitmaps_test/20240326-232817/form-validation_31.png",
+        "selector": ".guests-group",
+        "fileName": "form-validation_31.png",
+        "label": "form-validation 3.1",
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Personal projects/test-assignments/html_academy_layout/task-js/component-2/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 23.736263736263734,
+          "misMatchPercentage": "23.74",
+          "analysisTime": 38
+        },
+        "diffImage": "../bitmaps_test/20240326-232817/failed_diff_form-validation_31.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-js/component-2/reference/form-validation_32.png",
+        "test": "../bitmaps_test/20240326-232817/form-validation_32.png",
+        "selector": ".guests-group",
+        "fileName": "form-validation_32.png",
+        "label": "form-validation 3.2",
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Personal projects/test-assignments/html_academy_layout/task-js/component-2/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 23.736263736263734,
+          "misMatchPercentage": "23.74",
+          "analysisTime": 40
+        },
+        "diffImage": "../bitmaps_test/20240326-232817/failed_diff_form-validation_32.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-js/component-2/reference/form-validation_33.png",
+        "test": "../bitmaps_test/20240326-232817/form-validation_33.png",
+        "selector": ".guests-group",
+        "fileName": "form-validation_33.png",
+        "label": "form-validation 3.3",
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Personal projects/test-assignments/html_academy_layout/task-js/component-2/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 23.736263736263734,
+          "misMatchPercentage": "23.74",
+          "analysisTime": 77
+        },
+        "diffImage": "../bitmaps_test/20240326-232817/failed_diff_form-validation_33.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-js/component-2/reference/form-validation_34.png",
+        "test": "../bitmaps_test/20240326-232817/form-validation_34.png",
+        "selector": ".guests-group",
+        "fileName": "form-validation_34.png",
+        "label": "form-validation 3.4",
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Personal projects/test-assignments/html_academy_layout/task-js/component-2/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 23.736263736263734,
+          "misMatchPercentage": "23.74",
+          "analysisTime": 43
+        },
+        "diffImage": "../bitmaps_test/20240326-232817/failed_diff_form-validation_34.png"
+      },
+      "status": "fail"
+    }
+  ]
+}

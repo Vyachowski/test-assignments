@@ -1,0 +1,773 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/header-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/header-desktop.png",
+        "selector": "[data-test=\"header\"]",
+        "fileName": "header-desktop.png",
+        "label": "header",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.4479166666666667,
+          "misMatchPercentage": "0.45",
+          "analysisTime": 63
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/header-tablet.png",
+        "test": "../bitmaps_test/20240325-173711/header-tablet.png",
+        "selector": "[data-test=\"header\"]",
+        "fileName": "header-tablet.png",
+        "label": "header",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.3081597222222222,
+          "misMatchPercentage": "0.31",
+          "analysisTime": 39
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/header-mobile.png",
+        "test": "../bitmaps_test/20240325-173711/header-mobile.png",
+        "selector": "[data-test=\"header\"]",
+        "fileName": "header-mobile.png",
+        "label": "header",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.02666666666666667,
+          "misMatchPercentage": "0.03",
+          "analysisTime": 14
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/header-overflow-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/header-overflow-desktop.png",
+        "selector": "[data-test=\"header\"]",
+        "fileName": "header-overflow-desktop.png",
+        "label": "header-overflow",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.3416666666666667,
+          "misMatchPercentage": "0.34",
+          "analysisTime": 202
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/header-overflow-mobile.png",
+        "test": "../bitmaps_test/20240325-173711/header-overflow-mobile.png",
+        "selector": "[data-test=\"header\"]",
+        "fileName": "header-overflow-mobile.png",
+        "label": "header-overflow",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.2488888888888889,
+          "misMatchPercentage": "0.25",
+          "analysisTime": 64
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/header-strict-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/header-strict-desktop.png",
+        "selector": "[data-test=\"header\"]",
+        "fileName": "header-strict-desktop.png",
+        "label": "header-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.7,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.4479166666666667,
+          "misMatchPercentage": "0.45",
+          "analysisTime": 89
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/header-strict-tablet.png",
+        "test": "../bitmaps_test/20240325-173711/header-strict-tablet.png",
+        "selector": "[data-test=\"header\"]",
+        "fileName": "header-strict-tablet.png",
+        "label": "header-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.7,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.3081597222222222,
+          "misMatchPercentage": "0.31",
+          "analysisTime": 54
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/header-strict-mobile.png",
+        "test": "../bitmaps_test/20240325-173711/header-strict-mobile.png",
+        "selector": "[data-test=\"header\"]",
+        "fileName": "header-strict-mobile.png",
+        "label": "header-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.02666666666666667,
+          "misMatchPercentage": "0.03",
+          "analysisTime": 18
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/header-overflow-strict-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/header-overflow-strict-desktop.png",
+        "selector": "[data-test=\"header\"]",
+        "fileName": "header-overflow-strict-desktop.png",
+        "label": "header-overflow-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 1,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.3416666666666667,
+          "misMatchPercentage": "0.34",
+          "analysisTime": 409
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/header-overflow-strict-mobile.png",
+        "test": "../bitmaps_test/20240325-173711/header-overflow-strict-mobile.png",
+        "selector": "[data-test=\"header\"]",
+        "fileName": "header-overflow-strict-mobile.png",
+        "label": "header-overflow-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 1,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.2488888888888889,
+          "misMatchPercentage": "0.25",
+          "analysisTime": 25
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/hero-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/hero-desktop.png",
+        "selector": "[data-test=\"hero\"]",
+        "fileName": "hero-desktop.png",
+        "label": "hero",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.23589409722222224,
+          "misMatchPercentage": "0.24",
+          "analysisTime": 533
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/hero-tablet.png",
+        "test": "../bitmaps_test/20240325-173711/hero-tablet.png",
+        "selector": "[data-test=\"hero\"]",
+        "fileName": "hero-tablet.png",
+        "label": "hero",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.5441810344827586,
+          "misMatchPercentage": "0.54",
+          "analysisTime": 86
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/hero-mobile.png",
+        "test": "../bitmaps_test/20240325-173711/hero-mobile.png",
+        "selector": "[data-test=\"hero\"]",
+        "fileName": "hero-mobile.png",
+        "label": "hero",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 4,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.45733333333333337,
+          "misMatchPercentage": "0.46",
+          "analysisTime": 49
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/hero-overflow-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/hero-overflow-desktop.png",
+        "selector": "[data-test=\"hero\"]",
+        "fileName": "hero-overflow-desktop.png",
+        "label": "hero-overflow",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 5.697482638888888,
+          "misMatchPercentage": "5.70",
+          "analysisTime": 672
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_hero-overflow-desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/hero-underflow-tablet.png",
+        "test": "../bitmaps_test/20240325-173711/hero-underflow-tablet.png",
+        "selector": "[data-test=\"hero\"]",
+        "fileName": "hero-underflow-tablet.png",
+        "label": "hero-underflow",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 4.351861627252252,
+          "misMatchPercentage": "4.35",
+          "analysisTime": 350
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_hero-underflow-tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/hero-strict-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/hero-strict-desktop.png",
+        "selector": "[data-test=\"hero\"]",
+        "fileName": "hero-strict-desktop.png",
+        "label": "hero-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 1,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.23589409722222224,
+          "misMatchPercentage": "0.24",
+          "analysisTime": 375
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/hero-strict-tablet.png",
+        "test": "../bitmaps_test/20240325-173711/hero-strict-tablet.png",
+        "selector": "[data-test=\"hero\"]",
+        "fileName": "hero-strict-tablet.png",
+        "label": "hero-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 1,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.5441810344827586,
+          "misMatchPercentage": "0.54",
+          "analysisTime": 476
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/hero-strict-mobile.png",
+        "test": "../bitmaps_test/20240325-173711/hero-strict-mobile.png",
+        "selector": "[data-test=\"hero\"]",
+        "fileName": "hero-strict-mobile.png",
+        "label": "hero-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 2,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.45733333333333337,
+          "misMatchPercentage": "0.46",
+          "analysisTime": 481
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/hero-overflow-strict-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/hero-overflow-strict-desktop.png",
+        "selector": "[data-test=\"hero\"]",
+        "fileName": "hero-overflow-strict-desktop.png",
+        "label": "hero-overflow-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 1.5,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 5.697482638888888,
+          "misMatchPercentage": "5.70",
+          "analysisTime": 477
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_hero-overflow-strict-desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/hero-underflow-strict-tablet.png",
+        "test": "../bitmaps_test/20240325-173711/hero-underflow-strict-tablet.png",
+        "selector": "[data-test=\"hero\"]",
+        "fileName": "hero-underflow-strict-tablet.png",
+        "label": "hero-underflow-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 1.5,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 4.351861627252252,
+          "misMatchPercentage": "4.35",
+          "analysisTime": 663
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_hero-underflow-strict-tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/events-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/events-desktop.png",
+        "selector": "[data-test=\"events\"]",
+        "fileName": "events-desktop.png",
+        "label": "events",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 67.85748445719751,
+          "misMatchPercentage": "67.86",
+          "analysisTime": 1922
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_events-desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/events-mobile.png",
+        "test": "../bitmaps_test/20240325-173711/events-mobile.png",
+        "selector": "[data-test=\"events\"]",
+        "fileName": "events-mobile.png",
+        "label": "events",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 96.22966507177033,
+          "misMatchPercentage": "96.23",
+          "analysisTime": 1425
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_events-mobile.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/events-tablet.png",
+        "test": "../bitmaps_test/20240325-173711/events-tablet.png",
+        "selector": "[data-test=\"events\"]",
+        "fileName": "events-tablet.png",
+        "label": "events",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 97.18569318753141,
+          "misMatchPercentage": "97.19",
+          "analysisTime": 2184
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_events-tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/events-overflow-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/events-overflow-desktop.png",
+        "selector": "[data-test=\"events\"]",
+        "fileName": "events-overflow-desktop.png",
+        "label": "events-overflow",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "engineErrorMsg": "Не удалось найти элемент содержащий текст «Гастрономическое» для тестирования переполнения",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 67.7352343376375,
+          "misMatchPercentage": "67.74",
+          "analysisTime": 1857
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_events-overflow-desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/events-underflow-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/events-underflow-desktop.png",
+        "selector": "[data-test=\"events\"]",
+        "fileName": "events-underflow-desktop.png",
+        "label": "events-underflow",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 3,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "engineErrorMsg": "Не удалось найти элемент содержащий текст «Гастрономическое» для тестирования переполнения",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 68.14373106966364,
+          "misMatchPercentage": "68.14",
+          "analysisTime": 1728
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_events-underflow-desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/events-strict-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/events-strict-desktop.png",
+        "selector": "[data-test=\"events\"]",
+        "fileName": "events-strict-desktop.png",
+        "label": "events-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.7,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 67.85748445719751,
+          "misMatchPercentage": "67.86",
+          "analysisTime": 1721
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_events-strict-desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/events-strict-mobile.png",
+        "test": "../bitmaps_test/20240325-173711/events-strict-mobile.png",
+        "selector": "[data-test=\"events\"]",
+        "fileName": "events-strict-mobile.png",
+        "label": "events-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.7,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 96.22966507177033,
+          "misMatchPercentage": "96.23",
+          "analysisTime": 1362
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_events-strict-mobile.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/events-strict-tablet.png",
+        "test": "../bitmaps_test/20240325-173711/events-strict-tablet.png",
+        "selector": "[data-test=\"events\"]",
+        "fileName": "events-strict-tablet.png",
+        "label": "events-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 1,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 97.18569318753141,
+          "misMatchPercentage": "97.19",
+          "analysisTime": 2131
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_events-strict-tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/events-overflow-strict-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/events-overflow-strict-desktop.png",
+        "selector": "[data-test=\"events\"]",
+        "fileName": "events-overflow-strict-desktop.png",
+        "label": "events-overflow-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.7,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "engineErrorMsg": "Не удалось найти элемент содержащий текст «Гастрономическое» для тестирования переполнения",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 67.7352343376375,
+          "misMatchPercentage": "67.74",
+          "analysisTime": 1706
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_events-overflow-strict-desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../../test-htmlcss/reference/events-underflow-strict-desktop.png",
+        "test": "../bitmaps_test/20240325-173711/events-underflow-strict-desktop.png",
+        "selector": "[data-test=\"events\"]",
+        "fileName": "events-underflow-strict-desktop.png",
+        "label": "events-underflow-strict",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.7,
+        "url": "file:///Users/vyachowski/Sites/Educational Projects/init/task-htmlcss/index.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "engineErrorMsg": "Не удалось найти элемент содержащий текст «Гастрономическое» для тестирования переполнения",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 68.14373106966364,
+          "misMatchPercentage": "68.14",
+          "analysisTime": 1709
+        },
+        "diffImage": "../bitmaps_test/20240325-173711/failed_diff_events-underflow-strict-desktop.png"
+      },
+      "status": "fail"
+    }
+  ]
+}
