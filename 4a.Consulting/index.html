@@ -1,102 +1,152 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cook-Tour">
-  <title>Cook-Tour</title>
+  <title>Fitness Promo</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <header data-test="header">
-    <div class="header-wrapper">
-      <a class="header__logo logo" href="#">
-        <img class="logo__image" src="./images/logo.svg" width="190" height="50" alt="Логотип компании Cook tour.">
-      </a>
-      <nav class="header__navigation navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Гастротуры</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Бронирование</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">О&nbsp;нас</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Отзывы</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Фотографии</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <a class="phone" href="tel:88007253232">8 800 725-32-32</a>
-    </div>
-  </header>
-  <main>
-    <section data-test="hero">
-      <div class="hero-wrapper">
-        <h1 class="hero__title">
-          Исследуйте вкусы Кавказа
-        </h1>
-        <p class="hero__text">
-          В сопровождении опытных шеф-поваров вы откроете для себя богатство кавказской кухни и научитесь готовить традиционные блюда.
+  <header class="header">
+    <dl class="discount-timer">
+      <dd class="discount-timer__description">
+        Скидка действует:
+      </dd>
+      <dt class="discount-timer__value">
+        <p class="discount-timer__time discount-timer__time--hours">
+          <strong>00</strong>
+          <small>часов</small>
         </p>
-        <a class="hero__button" href="#">Подробнее о&nbsp;курсе</a>
+        <span class="discount-timer__separator">:</span>
+        <p class="discount-timer__time discount-timer__time--minutes">
+          <strong>00</strong>
+          <small>минут</small>
+        </p>
+      </dt>
+    </dl>
+  </header>
+  <main class="main">
+    <h1 class="title page-title">
+      Выберите подходящий тарифный план
+    </h1>
+    <section class="sale">
+      <div class="sale-image-wrapper">
+        <img class="sale__image" src="./images/fit_body.png" width="434" height="715" alt="Крепкий сильный мужчина – результат прохождения курса.">
       </div>
-    </section>
-    <section data-test="events">
-      <div class="events__wrapper">
-        <h2 class="events__title">Предстоящие события</h2>
-        <ul class="events__list">
-          <li class="events__item card card--caucasus">
-            <div class="card__wrapper">
-              <p class="card__label">Кавказ</p>
-              <div class="card__content-wrapper">
-                <small class="card__duration">4&nbsp;дня</small>
-                <h3 class="card__title">
-                  Гастрономическое путешествие вокруг Кавказа
-                </h3>
-                <small class="card__rating-label">Сложность:</small>
-                <span class="card__rating card__rating--three-stars">3 звезды</span>
+      <div class="sale__form-wrapper">
+        <form action="/" class="sale__form" method="post">
+          <ul class="sale__list">
+            <li class="sale__item sale-item">
+              <label class="sale-item__label" for="sale-option-1"></label>
+              <input class="sale-item__input visually-hidden" id="sale-option-1" type="radio" name="duration" value="1 week">
+              <div class="sale-item__content">
+                <div class="sale-item__description">
+                  <h3 class="sale-item__title">
+                    1 месяц
+                  </h3>
+                  <span>Чтобы просто начать 👍🏻</span>
+                </div>
+                <p class="sale-item__price">
+                  <strong>699₽</strong>
+                  <s class="sale-item__old-price text--mute">999₽</s>
+                </p>
               </div>
-            </div>
-          </li>
-          <li class="events__item card card--altai">
-            <div class="card__wrapper">
-              <p class="card__label">Алтай</p>
-              <div class="card__content-wrapper">
-                <small class="card__duration">13&nbsp;дней</small>
-                <h3 class="card__title">
-                  Путь к мастерству в приготовлении блюд Алтая
-                </h3>
-                <small class="card__rating-label">Сложность:</small>
-                <span class="card__rating card__rating--two-stars">2 звезды</span>
+            </li>
+            <li class="sale__item sale-item">
+              <label class="sale-item__label" for="sale-option-2"></label>
+              <input class="sale-item__input visually-hidden" id="sale-option-2" type="radio" name="duration" value="1 week">
+              <div class="sale-item__content">
+                <div class="sale-item__description">
+                  <h3 class="sale-item__title">
+                    1 месяц
+                  </h3>
+                  <span>Чтобы просто начать 👍🏻</span>
+                </div>
+                <p class="sale-item__price">
+                  <strong>699₽</strong>
+                  <s class="sale-item__old-price text--mute">999₽</s>
+                </p>
               </div>
-            </div>
-          </li>
-          <li class="events__item card card--adygea">
-            <div class="card__wrapper">
-              <p class="card__label">Адыгея</p>
-              <div class="card__content-wrapper">
-                <small class="card__duration">6&nbsp;дней</small>
-                <h3 class="card__title">
-                  От горных трав до морских деликатесов
-                </h3>
-                <small class="card__rating-label">Сложность:</small>
-                <span class="card__rating card__rating--four-stars">4 звезды</span>
+            </li>
+            <li class="sale__item sale-item">
+              <label class="sale-item__label" for="sale-option-3"></label>
+              <input class="sale-item__input visually-hidden" id="sale-option-3" type="radio" name="duration" value="1 week">
+              <div class="sale-item__content">
+                <div class="sale-item__description">
+                  <h3 class="sale-item__title">
+                    1 месяц
+                  </h3>
+                  <span>Чтобы просто начать 👍🏻</span>
+                </div>
+                <p class="sale-item__price">
+                  <strong>699₽</strong>
+                  <s class="sale-item__old-price text--mute">999₽</s>
+                </p>
               </div>
-            </div>
-          </li>
-        </ul>
-        <a href="#" class="events__more">Показать все курсы</a>
+            </li>
+            <li class="sale__item sale__item--wide sale-item ">
+              <label class="sale-item__label" for="sale-option-4"></label>
+              <input class="sale-item__input visually-hidden" id="sale-option-4" type="radio" name="duration" value="1 week">
+              <div class="sale-item__content">
+                <div class="sale-item__description">
+                  <h3 class="sale-item__title">
+                    1 месяц
+                  </h3>
+                  <span>Чтобы просто начать 👍🏻</span>
+                </div>
+                <p class="sale-item__price">
+                  <strong>699₽</strong>
+                  <s class="sale-item__old-price text--mute">999₽</s>
+                </p>
+              </div>
+            </li>
+          </ul>
+          <p class="sale__promo-text">
+            Следуя плану на 3 месяца, люди получают в 2 раза лучший результат, чем за 1 месяц
+          </p>
+          <p class="sale__confirmation">
+            <label class="sale-confirmation__label" for="sale-confirmation"></label>
+            <input class="sale__confirmation-box visually-hidden" id="sale-confirmation" type="checkbox" name="confirmation" checked>
+            <span class="sale__confirmation-description">
+              Я соглашаюсь с <a class="link" href="#">Правилами сервиса</a> и
+              условиями <a class="link" href="#">Публичной оферты</a>.
+            </span>
+          </p>
+          <button class="sale__button button" type="submit">
+            Купить
+          </button>
+        </form>
+        <p class="sale__agreement">
+          Нажимая «Купить», Пользователь соглашается на автоматическое списание денежных средств
+          по истечению купленного периода. Дальнейшие списания по тарифам участвующим в акции
+          осуществляются по полной стоимости согласно оферте.
+        </p>
       </div>
     </section>
   </main>
+<!--  <div class="modal-wrapper">-->
+<!--    <div class="modal hot-sale">-->
+<!--      <h2 class="title-2">Не упусти свой последний шанс</h2>-->
+<!--      <p>Мы знаем, как трудно начать.. Поэтому!</p>-->
+<!--      <p class="promo-message">Дарим скидку для лёгкого старта 🏃‍♂️</p>-->
+<!--      <p>Посмотри, что мы для тебя приготовили 🔥</p>-->
+<!--      <form action="/" class="hot-sale__form" method="post">-->
+<!--        <ul class="hot-sale__list">-->
+<!--          <li class="hot-sale__item sale-item">-->
+<!--            <label for="hot-sale-option-1"></label>-->
+<!--            <input id="hot-sale-option-1" type="radio" name="duration" value="1 week">-->
+<!--            <div class="hot-sale-item__content">-->
+<!--              <dl class="hot-sale-item__option">-->
+<!--                <dt class="hot-sale-item__duration">1 неделя</dt>-->
+<!--                <dd class="hot-sale-item__price">599₽</dd>-->
+<!--              </dl>-->
+<!--              <small class="hot-sale-item__old-price text&#45;&#45;mute">999₽</small>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
 </body>
 </html>
