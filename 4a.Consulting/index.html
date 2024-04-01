@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cook-Tour">
-  <title>Fitness Promo</title>
+  <meta name="description" content="Выбор тарифа для тренировок">
+  <title>Промо страница "Фитнес план"</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -18,7 +18,12 @@
           <strong>00</strong>
           <small>часов</small>
         </p>
-        <span class="discount-timer__separator">:</span>
+        <span class="discount-timer__separator">
+          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 5 14" fill="currentColor">
+            <circle cx="2.5" cy="2" r="2"/>
+            <circle cx="2.5" cy="12" r="2"/>
+          </svg>
+        </span>
         <p class="discount-timer__time discount-timer__time--minutes">
           <strong>00</strong>
           <small>минут</small>
@@ -42,15 +47,21 @@
               <input class="sale-item__input visually-hidden" id="sale-option-1" type="radio" name="duration" value="1 week">
               <div class="sale-item__content">
                 <div class="sale-item__description">
-                  <h3 class="sale-item__title">
+                  <h2 class="sale-item__title title-2 title-2--mute">
                     1 месяц
-                  </h3>
-                  <span>Чтобы просто начать 👍🏻</span>
+                  </h2>
+                  <span class="sale-item__text">Чтобы просто начать 👍🏻</span>
                 </div>
-                <p class="sale-item__price">
-                  <strong>699₽</strong>
+                <p class="sale-item__prices">
+                  <strong class="sale-item__price">699₽</strong>
                   <s class="sale-item__old-price text--mute">999₽</s>
                 </p>
+              </div>
+              <div class="sale-item__discount-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="47" viewBox="0 0 46 47" fill="#FD4D35">
+                  <path d="M19.1737 2.33184C21.3671 0.421923 24.6329 0.421923 26.8263 2.33184C28.1083 3.44816 29.8138 3.94896 31.4958 3.70294C34.3736 3.28203 37.121 5.04769 37.9336 7.84023C38.4085 9.47243 39.5726 10.8158 41.1206 11.5182C43.769 12.7199 45.1257 15.6907 44.2995 18.4792C43.8167 20.1091 44.0696 21.8686 44.9921 23.2964C46.5705 25.7392 46.1057 28.9718 43.9031 30.871C42.6157 31.9811 41.8772 33.598 41.8814 35.2979C41.8885 38.2063 39.7498 40.6744 36.87 41.0813C35.1868 41.3192 33.6915 42.2802 32.7759 43.7125C31.2095 46.1629 28.0759 47.083 25.4333 45.8684C23.8888 45.1585 22.1112 45.1585 20.5667 45.8684C17.9241 47.083 14.7905 46.1629 13.2241 43.7125C12.3085 42.2802 10.8132 41.3192 9.12998 41.0813C6.25022 40.6744 4.11153 38.2063 4.11862 35.2979C4.12276 33.598 3.38433 31.9811 2.09693 30.871C-0.105695 28.9718 -0.570477 25.7392 1.00786 23.2964C1.93037 21.8686 2.18334 20.1091 1.70045 18.4792C0.874282 15.6907 2.23097 12.7199 4.87945 11.5182C6.42744 10.8158 7.59149 9.47243 8.06643 7.84023C8.87902 5.04769 11.6264 3.28203 14.5042 3.70294C16.1862 3.94896 17.8917 3.44816 19.1737 2.33184Z"/>
+                </svg>
+                <span class="sale-item__discount-value">-30%</span>
               </div>
             </li>
             <li class="sale__item sale-item">
@@ -58,59 +69,79 @@
               <input class="sale-item__input visually-hidden" id="sale-option-2" type="radio" name="duration" value="1 week">
               <div class="sale-item__content">
                 <div class="sale-item__description">
-                  <h3 class="sale-item__title">
-                    1 месяц
-                  </h3>
-                  <span>Чтобы просто начать 👍🏻</span>
+                  <h2 class="sale-item__title title-2 title-2--mute">
+                    3 месяца
+                  </h2>
+                  <span class="sale-item__text">Привести тело впорядок 💪🏻</span>
                 </div>
-                <p class="sale-item__price">
-                  <strong>699₽</strong>
-                  <s class="sale-item__old-price text--mute">999₽</s>
+                <p class="sale-item__prices">
+                  <strong class="sale-item__price">999₽</strong>
+                  <s class="sale-item__old-price text--mute">1299₽</s>
                 </p>
+              </div>
+              <div class="sale-item__discount-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="47" viewBox="0 0 46 47" fill="#FD4D35">
+                  <path d="M19.1737 2.33184C21.3671 0.421923 24.6329 0.421923 26.8263 2.33184C28.1083 3.44816 29.8138 3.94896 31.4958 3.70294C34.3736 3.28203 37.121 5.04769 37.9336 7.84023C38.4085 9.47243 39.5726 10.8158 41.1206 11.5182C43.769 12.7199 45.1257 15.6907 44.2995 18.4792C43.8167 20.1091 44.0696 21.8686 44.9921 23.2964C46.5705 25.7392 46.1057 28.9718 43.9031 30.871C42.6157 31.9811 41.8772 33.598 41.8814 35.2979C41.8885 38.2063 39.7498 40.6744 36.87 41.0813C35.1868 41.3192 33.6915 42.2802 32.7759 43.7125C31.2095 46.1629 28.0759 47.083 25.4333 45.8684C23.8888 45.1585 22.1112 45.1585 20.5667 45.8684C17.9241 47.083 14.7905 46.1629 13.2241 43.7125C12.3085 42.2802 10.8132 41.3192 9.12998 41.0813C6.25022 40.6744 4.11153 38.2063 4.11862 35.2979C4.12276 33.598 3.38433 31.9811 2.09693 30.871C-0.105695 28.9718 -0.570477 25.7392 1.00786 23.2964C1.93037 21.8686 2.18334 20.1091 1.70045 18.4792C0.874282 15.6907 2.23097 12.7199 4.87945 11.5182C6.42744 10.8158 7.59149 9.47243 8.06643 7.84023C8.87902 5.04769 11.6264 3.28203 14.5042 3.70294C16.1862 3.94896 17.8917 3.44816 19.1737 2.33184Z"/>
+                </svg>
+                <span class="sale-item__discount-value">-40%</span>
               </div>
             </li>
             <li class="sale__item sale-item">
               <label class="sale-item__label" for="sale-option-3"></label>
               <input class="sale-item__input visually-hidden" id="sale-option-3" type="radio" name="duration" value="1 week">
               <div class="sale-item__content">
-                <div class="sale-item__description">
-                  <h3 class="sale-item__title">
-                    1 месяц
-                  </h3>
-                  <span>Чтобы просто начать 👍🏻</span>
+                <div class="sale-item__description sale-item__description--narrow">
+                  <h2 class="sale-item__title title-2 title-2--mute">
+                    1 год
+                  </h2>
+                  <span class="sale-item__text">Изменить образ жизни 🔥</span>
                 </div>
-                <p class="sale-item__price">
-                  <strong>699₽</strong>
-                  <s class="sale-item__old-price text--mute">999₽</s>
+                <p class="sale-item__prices">
+                  <strong class="sale-item__price">2990₽</strong>
+                  <s class="sale-item__old-price text--mute">5990₽</s>
                 </p>
+              </div>
+              <div class="sale-item__discount-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="47" viewBox="0 0 46 47" fill="#FD4D35">
+                  <path d="M19.1737 2.33184C21.3671 0.421923 24.6329 0.421923 26.8263 2.33184C28.1083 3.44816 29.8138 3.94896 31.4958 3.70294C34.3736 3.28203 37.121 5.04769 37.9336 7.84023C38.4085 9.47243 39.5726 10.8158 41.1206 11.5182C43.769 12.7199 45.1257 15.6907 44.2995 18.4792C43.8167 20.1091 44.0696 21.8686 44.9921 23.2964C46.5705 25.7392 46.1057 28.9718 43.9031 30.871C42.6157 31.9811 41.8772 33.598 41.8814 35.2979C41.8885 38.2063 39.7498 40.6744 36.87 41.0813C35.1868 41.3192 33.6915 42.2802 32.7759 43.7125C31.2095 46.1629 28.0759 47.083 25.4333 45.8684C23.8888 45.1585 22.1112 45.1585 20.5667 45.8684C17.9241 47.083 14.7905 46.1629 13.2241 43.7125C12.3085 42.2802 10.8132 41.3192 9.12998 41.0813C6.25022 40.6744 4.11153 38.2063 4.11862 35.2979C4.12276 33.598 3.38433 31.9811 2.09693 30.871C-0.105695 28.9718 -0.570477 25.7392 1.00786 23.2964C1.93037 21.8686 2.18334 20.1091 1.70045 18.4792C0.874282 15.6907 2.23097 12.7199 4.87945 11.5182C6.42744 10.8158 7.59149 9.47243 8.06643 7.84023C8.87902 5.04769 11.6264 3.28203 14.5042 3.70294C16.1862 3.94896 17.8917 3.44816 19.1737 2.33184Z"/>
+                </svg>
+                <span class="sale-item__discount-value">-50%</span>
               </div>
             </li>
             <li class="sale__item sale__item--wide sale-item ">
-              <label class="sale-item__label" for="sale-option-4"></label>
+              <label class="sale-item__label" for="sale-option-4">
+                <span class="visually-hidden"> Вечный тариф</span>
+              </label>
               <input class="sale-item__input visually-hidden" id="sale-option-4" type="radio" name="duration" value="1 week">
               <div class="sale-item__content">
-                <div class="sale-item__description">
-                  <h3 class="sale-item__title">
-                    1 месяц
-                  </h3>
-                  <span>Чтобы просто начать 👍🏻</span>
+                <div class="sale-item__description sale-item__description--narrow">
+                  <h2 class="sale-item__title title-2">
+                    Навсегда
+                  </h2>
+                  <span class="sale-item__text">Всегда быть в&nbsp;форме ⭐️</span>
                 </div>
-                <p class="sale-item__price">
-                  <strong>699₽</strong>
-                  <s class="sale-item__old-price text--mute">999₽</s>
+                <p class="sale-item__prices">
+                  <strong class="sale-item__price">5990₽</strong>
+                  <s class="sale-item__old-price text--mute">18&nbsp;990₽</s>
                 </p>
+              </div>
+              <div class="sale-item__discount-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="47" viewBox="0 0 46 47" fill="#FD4D35">
+                  <path d="M19.1737 2.33184C21.3671 0.421923 24.6329 0.421923 26.8263 2.33184C28.1083 3.44816 29.8138 3.94896 31.4958 3.70294C34.3736 3.28203 37.121 5.04769 37.9336 7.84023C38.4085 9.47243 39.5726 10.8158 41.1206 11.5182C43.769 12.7199 45.1257 15.6907 44.2995 18.4792C43.8167 20.1091 44.0696 21.8686 44.9921 23.2964C46.5705 25.7392 46.1057 28.9718 43.9031 30.871C42.6157 31.9811 41.8772 33.598 41.8814 35.2979C41.8885 38.2063 39.7498 40.6744 36.87 41.0813C35.1868 41.3192 33.6915 42.2802 32.7759 43.7125C31.2095 46.1629 28.0759 47.083 25.4333 45.8684C23.8888 45.1585 22.1112 45.1585 20.5667 45.8684C17.9241 47.083 14.7905 46.1629 13.2241 43.7125C12.3085 42.2802 10.8132 41.3192 9.12998 41.0813C6.25022 40.6744 4.11153 38.2063 4.11862 35.2979C4.12276 33.598 3.38433 31.9811 2.09693 30.871C-0.105695 28.9718 -0.570477 25.7392 1.00786 23.2964C1.93037 21.8686 2.18334 20.1091 1.70045 18.4792C0.874282 15.6907 2.23097 12.7199 4.87945 11.5182C6.42744 10.8158 7.59149 9.47243 8.06643 7.84023C8.87902 5.04769 11.6264 3.28203 14.5042 3.70294C16.1862 3.94896 17.8917 3.44816 19.1737 2.33184Z"/>
+                </svg>
+                <span class="sale-item__discount-value">-70%</span>
               </div>
             </li>
           </ul>
           <p class="sale__promo-text">
-            Следуя плану на 3 месяца, люди получают в 2 раза лучший результат, чем за 1 месяц
+            Следуя плану на 3 месяца, люди получают в&nbsp;2&nbsp;раза&nbsp;лучший результат, чем за 1 месяц
           </p>
           <p class="sale__confirmation">
-            <label class="sale-confirmation__label" for="sale-confirmation"></label>
             <input class="sale__confirmation-box visually-hidden" id="sale-confirmation" type="checkbox" name="confirmation" checked>
+            <label class="sale-confirmation__label" for="sale-confirmation" aria-label="Согласиться с правилами."></label>
             <span class="sale__confirmation-description">
-              Я соглашаюсь с <a class="link" href="#">Правилами сервиса</a> и
-              условиями <a class="link" href="#">Публичной оферты</a>.
+              Я соглашаюсь с <a class="link" href="#">Правилами сервиса</a>
+              и&nbsp;&nbsp;условиями <a class="link" href="#">Публичной оферты</a>.
             </span>
           </p>
           <button class="sale__button button" type="submit">
