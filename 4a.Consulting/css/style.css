@@ -456,7 +456,7 @@ img {
 
 /* Sale card*/
 
-.sale-item {
+.card {
   position: relative;
   min-height: 144px;
   padding: 36px 62px 26px 24px;
@@ -465,19 +465,19 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item {
+  .card {
     padding: 45px 18px 26px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item {
+  .card {
     width: 191px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item--wide {
+  .card--wide {
     grid-column: 1 / -1;
     width: 100%;
     min-height: 125px;
@@ -485,12 +485,12 @@ img {
   }
 }
 
-.sale-item:has(input:checked) {
+.card:has(input:checked) {
   border-color: var(--accent-color);
   background-color: var(--card-background-color);
 }
 
-.sale-item__label {
+.card__label {
   position: absolute;
   top: 0;
   left: 0;
@@ -500,13 +500,13 @@ img {
   height: 100%;
 }
 
-.sale-item__content {
+.card__content {
   display: flex;
   gap: 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item__content {
+  .card__content {
     flex-direction: column;
     align-items: center;
     gap: 21px;
@@ -514,38 +514,38 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item__content--horizontal {
+  .card__content--horizontal {
     flex-direction: row;
     align-items: flex-start;
     gap: 0;
   }
 
-  .sale-item__content--horizontal .sale-item__title {
+  .card__content--horizontal .card__title {
     margin-right: 30px;
     padding-top: 12px;
     font-size: 38px;
   }
 
-  .sale-item__content--horizontal .sale-item__prices {
+  .card__content--horizontal .card__prices {
     margin-right: auto;
   }
 
-  .sale-item__content--horizontal .sale-item__price {
+  .card__content--horizontal .card__price {
     padding-top: 0;
   }
 
-  .sale-item__content--horizontal .sale-item__text {
+  .card__content--horizontal .card__text {
     max-width: 161px;
     padding-top: 11px;
     text-align: left;
   }
 
-  .sale-item__content--horizontal .sale-item__inner-text {
+  .card__content--horizontal .card__inner-text {
     display: inline;
   }
 }
 
-.sale-item__description {
+.card__description {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -554,32 +554,32 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item__description {
+  .card__description {
     display: contents;
   }
 }
 
-.sale-item__description--narrow {
+.card__description--narrow {
   gap: 10px;
 }
 
-.sale-item__title {
+.card__title {
   text-transform: uppercase;
 }
 
-.sale-item__text {
+.card__text {
   display: block;
   line-height: 18px;
   margin: 0;
 }
 
-.sale-item__inner-text {
+.card__inner-text {
   display: none;
   margin: 0;
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item__text {
+  .card__text {
     margin-top: -1px;
     text-indent: -2px;
     text-align: center;
@@ -588,34 +588,34 @@ img {
   }
 }
 
-.sale-item__prices {
+.card__prices {
   margin: 0;
   text-align: right;
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item__prices {
+  .card__prices {
     order: 2;
   }
 
-  .sale-item__title {
+  .card__title {
     order: 1;
     align-self: flex-start;
     text-indent: -4px;
   }
 
-  .sale-item__text {
+  .card__text {
     order: 3;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item__title--centered {
+  .card__title--centered {
     padding-left: 13px;
   }
 }
 
-.sale-item__price {
+.card__price {
   display: block;
   font-size: 44px;
   font-weight: 700;
@@ -625,7 +625,7 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item__price {
+  .card__price {
     text-indent: -6px;
     padding-top: 5px;
     font-size: 50px;
@@ -633,7 +633,7 @@ img {
   }
 }
 
-.sale-item__old-price {
+.card__old-price {
   position: relative;
   top: -1.5px;
   left: 1px;
@@ -643,12 +643,12 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item__old-price  {
+  .card__old-price  {
     font-size: 24px;
   }
 }
 
-.sale-item__discount-label {
+.card__discount-label {
   position: absolute;
   top: 3.5px;
   right: 9px;
@@ -665,7 +665,7 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item__discount-label {
+  .card__discount-label {
     top: -30px;
     right: 5px;
     width: 70px;
@@ -675,7 +675,7 @@ img {
 }
 
 
-.sale-item__discount-value {
+.card__discount-value {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -686,7 +686,7 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  .sale-item__discount-value {
+  .card__discount-value {
     font-size: 18.67px;
   }
 }
@@ -762,7 +762,7 @@ input[name=confirmation] + .sale-confirmation__label::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/tick.svg");
+  background-image: url("../images/tick-icon.svg");
   background-repeat: no-repeat;
   content: "";
   opacity: 0;
@@ -789,6 +789,7 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
     max-width: 281px;
     margin: 0;
     margin-bottom: 30px;
+    margin-left: 2px;
   }
 }
 
