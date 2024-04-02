@@ -499,7 +499,8 @@ img {
 @media screen and (min-width: 1024px) {
   .sale-item__content {
     flex-direction: column;
-    gap: 18px;
+    align-items: center;
+    gap: 21px;
   }
 }
 
@@ -530,6 +531,16 @@ img {
   line-height: 18px;
 }
 
+@media screen and (min-width: 1024px) {
+  .sale-item__text {
+    margin-top: -1px;
+    text-indent: -2px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 130%;
+  }
+}
+
 .sale-item__prices {
   margin: 0;
   text-align: right;
@@ -558,6 +569,15 @@ img {
   text-indent: -1px;
 }
 
+@media screen and (min-width: 1024px) {
+  .sale-item__price {
+    text-indent: -6px;
+    padding-top: 5px;
+    font-size: 50px;
+    margin-bottom: 5px;
+  }
+}
+
 .sale-item__old-price {
   position: relative;
   top: -1.5px;
@@ -565,6 +585,12 @@ img {
   display: block;
   font-size: 20px;
   line-height: 22px;
+}
+
+@media screen and (min-width: 1024px) {
+  .sale-item__old-price  {
+    font-size: 24px;
+  }
 }
 
 .sale-item__discount-label {
