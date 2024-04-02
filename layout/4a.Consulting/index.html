@@ -7,7 +7,7 @@
   <title>Промо страница "Фитнес план"</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="page-body">
   <header class="header">
     <dl class="discount-timer">
       <dd class="discount-timer__description">
@@ -147,28 +147,31 @@
       </div>
     </section>
   </main>
-<!--  <div class="modal-wrapper">-->
-<!--    <div class="modal hot-sale">-->
-<!--      <h2 class="title-2">Не упусти свой последний шанс</h2>-->
-<!--      <p>Мы знаем, как трудно начать.. Поэтому!</p>-->
-<!--      <p class="promo-message">Дарим скидку для лёгкого старта 🏃‍♂️</p>-->
-<!--      <p>Посмотри, что мы для тебя приготовили 🔥</p>-->
-<!--      <form action="/" class="hot-sale__form" method="post">-->
-<!--        <ul class="hot-sale__list">-->
-<!--          <li class="hot-sale__item card">-->
-<!--            <label for="hot-sale-option-1"></label>-->
-<!--            <input id="hot-sale-option-1" type="radio" name="duration" value="1 week">-->
-<!--            <div class="hot-card__content">-->
-<!--              <dl class="hot-card__option">-->
-<!--                <dt class="hot-card__duration">1 неделя</dt>-->
-<!--                <dd class="hot-card__price">599₽</dd>-->
-<!--              </dl>-->
-<!--              <small class="hot-card__old-price text&#45;&#45;mute">999₽</small>-->
-<!--            </div>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </form>-->
-<!--    </div>-->
-<!--  </div>-->
+  <div class="modal-window modal-window--open">
+    <div class="modal hot-sale">
+      <button class="close-button" type="button">
+        <span class="visually-hidden">Закрыть модальное окно.</span>
+      </button>
+      <h2 class="modal__title title-2">Не упусти свой <span>последний шанс</span></h2>
+      <p class="modal__text">Мы знаем, как трудно начать.. Поэтому!</p>
+      <p class="modal__promo">Дарим скидку для лёгкого старта 🏃‍♂️</p>
+      <p class="modal__text">Посмотри, что мы для тебя приготовили 🔥</p>
+      <form action="/" class="hot-sale__form" method="post">
+        <ul class="hot-sale__list">
+          <li class="hot-sale__item card">
+            <label for="hot-sale-option-1"></label>
+            <input id="hot-sale-option-1" type="radio" name="duration" value="1 week">
+            <div class="hot-card__content">
+              <dl class="hot-card__option">
+                <dt class="hot-card__duration">1 неделя</dt>
+                <dd class="hot-card__price">599₽</dd>
+              </dl>
+              <small class="hot-card__old-price text--mute">999₽</small>
+            </div>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

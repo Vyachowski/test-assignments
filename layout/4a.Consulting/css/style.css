@@ -74,6 +74,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   object-fit: contain;
@@ -805,4 +809,32 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
   .sale__agreement {
     display: block;
   }
+}
+
+.modal-window {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000066;
+}
+
+.modal-window--open {
+  display: flex;
+}
+
+.modal {
+  min-width: 335px;
+  max-width: 750px;
+  padding: 50px 20px 20px;
+  background-color: #ffffff;
+}
+
+.modal::before {
+  content: 'горящее предложение';
 }
