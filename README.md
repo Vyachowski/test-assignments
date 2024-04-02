@@ -1,4 +1,7 @@
-# All test assignments from the companies that I applied for
+# All test assignments
+
+See the interactive full list – https://vyachowski.github.io/test-assignments/
+
 
 1) Goal: Create a command line tool to check if site was made with WordPress
 
