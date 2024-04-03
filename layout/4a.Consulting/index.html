@@ -7,7 +7,7 @@
   <title>Промо страница "Фитнес план"</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="page-body">
+<body class="page-body modal-open">
   <header class="header">
     <dl class="discount-timer">
       <dd class="discount-timer__description">
@@ -41,11 +41,11 @@
       </div>
       <div class="sale__form-wrapper">
         <form action="/" class="sale__form" method="post">
-          <ul class="sale__list">
+          <ul class="sale__list card-list">
             <li class="sale__item card">
               <label class="card__label" for="sale-option-1"></label>
               <input class="card__input visually-hidden" id="sale-option-1" type="radio" name="duration" value="1 week">
-              <div class="card__content">
+              <div class="sale__content card__content">
                 <div class="card__description">
                   <h2 class="card__title card__title--centered title-2 title-2--mute">
                     1 месяц
@@ -64,7 +64,7 @@
             <li class="sale__item card">
               <label class="card__label" for="sale-option-2"></label>
               <input class="card__input visually-hidden" id="sale-option-2" type="radio" name="duration" value="1 week">
-              <div class="card__content">
+              <div class="sale__content card__content">
                 <div class="card__description">
                   <h2 class="card__title card__title--centered title-2 title-2--mute">
                     3 месяца
@@ -83,7 +83,7 @@
             <li class="sale__item card">
               <label class="card__label" for="sale-option-3"></label>
               <input class="card__input visually-hidden" id="sale-option-3" type="radio" name="duration" value="1 week">
-              <div class="card__content">
+              <div class="sale__content card__content">
                 <div class="card__description card__description--narrow">
                   <h2 class="card__title title-2 title-2--mute">
                     1 год
@@ -104,7 +104,7 @@
                 <span class="visually-hidden">Вечный тариф</span>
               </label>
               <input class="card__input visually-hidden" id="sale-option-4" type="radio" name="duration" value="1 week">
-              <div class="card__content card__content--horizontal">
+              <div class="sale__content sale__content--horizontal card__content">
                 <div class="card__description card__description--narrow">
                   <h2 class="card__title title-2">
                     Навсегда
@@ -149,28 +149,65 @@
   </main>
   <div class="modal-window modal-window--open">
     <div class="modal hot-sale">
-      <button class="close-button" type="button">
-        <span class="visually-hidden">Закрыть модальное окно.</span>
-      </button>
-      <h2 class="modal__title title-2">Не упусти свой <span>последний шанс</span></h2>
-      <p class="modal__text">Мы знаем, как трудно начать.. Поэтому!</p>
-      <p class="modal__promo">Дарим скидку для лёгкого старта 🏃‍♂️</p>
-      <p class="modal__text">Посмотри, что мы для тебя приготовили 🔥</p>
-      <form action="/" class="hot-sale__form" method="post">
-        <ul class="hot-sale__list">
-          <li class="hot-sale__item card">
-            <label for="hot-sale-option-1"></label>
-            <input id="hot-sale-option-1" type="radio" name="duration" value="1 week">
-            <div class="hot-card__content">
-              <dl class="hot-card__option">
-                <dt class="hot-card__duration">1 неделя</dt>
-                <dd class="hot-card__price">599₽</dd>
-              </dl>
-              <small class="hot-card__old-price text--mute">999₽</small>
-            </div>
-          </li>
-        </ul>
-      </form>
+      <div class="modal__wrapper">
+        <button class="modal__close-button" type="button">
+          <span class="visually-hidden">Закрыть модальное окно.</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ced1d8">
+            <path d="M18 6L6 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 6L18 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <h2 class="modal__title">Не упусти свой <span>последний шанс</span></h2>
+        <p class="modal__teaser">Мы знаем, как трудно начать.. <span>Поэтому!</span></p>
+        <p class="modal__promo">Дарим скидку для <span>лёгкого старта</span> 🏃‍♂️</p>
+        <p class="modal__text">Посмотри, что мы для тебя приготовили 🔥</p>
+        <form action="/" class="hot-sale__form" method="post">
+          <ul class="hot-sale__list card-list">
+            <li class="hot-sale__item card card--has-mark">
+              <label class="card__label" for="hot-sale-option-1"></label>
+              <input class="card__input visually-hidden" id="hot-sale-option-1" type="radio" name="duration" value="1 week">
+              <div class="hot-sale__content card__content">
+                <h2 class="hot-sale__title card__title title-2">
+                  1 неделя
+                </h2>
+                <p class="hot-sale__prices">
+                  <strong class="hot-sale__price card__price card__price--has-icon" title="-40%">999₽</strong>
+                  <s class="hot-sale__old-price card__old-price text--mute">1299₽</s>
+                </p>
+              </div>
+            </li>
+            <li class="hot-sale__item card card--has-mark">
+              <label class="card__label" for="hot-sale-option-2"></label>
+              <input class="card__input visually-hidden" id="hot-sale-option-2" type="radio" name="duration" value="1 week">
+              <div class="hot-sale__content card__content">
+                <h2 class="hot-sale__title card__title title-2">
+                  1 неделя
+                </h2>
+                <p class="hot-sale__prices">
+                  <strong class="hot-sale__price card__price card__price--has-icon" title="-40%">999₽</strong>
+                  <s class="hot-sale__old-price card__old-price text--mute">1299₽</s>
+                </p>
+              </div>
+            </li>
+            <li class="hot-sale__item card card--has-mark">
+              <label class="card__label" for="hot-sale-option-3"></label>
+              <input class="card__input visually-hidden" id="hot-sale-option-3" type="radio" name="duration" value="1 week">
+              <div class="hot-sale__content card__content">
+                <h2 class="hot-sale__title card__title title-2">
+                  1 неделя
+                </h2>
+                <p class="hot-sale__prices">
+                  <strong class="hot-sale__price card__price card__price--has-icon" title="-40%">999₽</strong>
+                  <s class="hot-sale__old-price card__old-price text--mute">1299₽</s>
+                </p>
+              </div>
+            </li>
+          </ul>
+          <button class="sale__button button" type="submit">
+            Начать тренироваться
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </body>
