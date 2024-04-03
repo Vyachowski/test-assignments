@@ -731,6 +731,18 @@ img {
   content: attr(title);
 }
 
+
+@media screen and (min-width: 768px) {
+  .card__price--has-icon::after {
+    top: -17px;
+    right: -3px;
+    width: 50px;
+    height: 50px;
+    font-size: 13.333px;
+    background-size: 48px;
+  }
+}
+
 .card__old-price {
   position: relative;
   top: -1.5px;
@@ -878,25 +890,6 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
   color: var(--secondary-text-color);
 }
 
-.sale__button {
-  margin: 0 auto;
-  padding-inline: 35px;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  text-transform: none;
-}
-
-@media screen and (min-width: 1024px) {
-  .sale__button {
-    max-width: 281px;
-    margin: 0;
-    margin-bottom: 30px;
-    margin-left: 2px;
-  }
-}
-
 .sale__agreement {
   display: none;
   margin: 0;
@@ -927,6 +920,12 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
   background-color: #00000066;
 }
 
+@media screen and (min-width: 768px) {
+  .modal-window {
+    padding: 230px 40px;
+  }
+}
+
 .modal-window--open {
   display: flex;
 }
@@ -940,15 +939,34 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
   background-color: #ffffff;
 }
 
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 750px;
+    padding: 61px 40px 20px;
+  }
+}
+
 .modal::before {
   position: absolute;
   top: 0;
   left: 0;
+  min-height: 21px;
   padding: 4px 10px 6px;
   letter-spacing: 0.28px;
   color: var(--button-text-color);
   background-color: var(--accent-color);
   content: 'горящее предложение';
+}
+
+@media screen and (min-width: 768px) {
+  .modal::before {
+    box-sizing: border-box;
+    left: 42px;
+    min-width: 193px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+  }
 }
 
 .modal__wrapper {
@@ -981,6 +999,18 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
   height: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .modal__close-button {
+    top: 20px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+  }
+  .modal__close-button > svg {
+
+  }
+}
+
 .modal__title {
   max-width: 245px;
   margin: 0 auto;
@@ -996,7 +1026,7 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
 @media screen and (min-width: 768px) {
   .modal__title {
     max-width: 573px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     font-size: 30px;
   }
 }
@@ -1017,6 +1047,7 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
 @media screen and (min-width: 768px) {
   .modal__teaser {
     max-width: 573px;
+    margin-bottom: 14px;
     font-size: 24px;
     font-family: "PT Root UI", "Helvetica", "Arial", sans-serif;
   }
@@ -1029,7 +1060,7 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
 .modal__promo {
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: 26px;
+  margin-bottom: 27px;
   padding: 12px 20px 14px 20px;
   border-radius: 30px;
   border: 1.5px solid var(--accent-color);
@@ -1042,7 +1073,7 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
 @media screen and (min-width: 768px) {
   .modal__promo {
     font-size: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 }
 
@@ -1053,14 +1084,14 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
 .modal__text {
   width: 300px;
   margin: 0;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 @media screen and (min-width: 768px) {
   .modal__text{
     width: fit-content;
     font-size: 24px;
-    margin-bottom: 18px;
+    margin-bottom: 25px;
   }
 }
 
@@ -1070,18 +1101,47 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
   margin-bottom: 18px;
 }
 
+@media screen and (min-width: 768px) {
+  .hot-sale__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 38px;
+  }
+}
+
 .hot-sale__item {
   width: 295px;
-  padding: 24px 20px 18px;
+  min-height: 136px;
+  padding: 24px 20px 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .hot-sale__item {
+    width: 210px;
+    min-height: 197px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .hot-sale__content {
+    position: relative;
     display: flex;
     flex-direction: column;
   }
-}
 
+  .hot-sale__content::before {
+    position: absolute;
+    bottom: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 134px;
+    height: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 1px;
+    content: "";
+  }
+}
 
 .hot-sale__title {
   margin-bottom: 19px;
@@ -1089,6 +1149,7 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
 
 @media screen and (min-width: 768px) {
   .hot-sale__title {
+    margin-bottom: 12px;
     order: 1;
   }
 }
@@ -1097,6 +1158,7 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -1112,10 +1174,55 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
   }
 }
 
+.hot-sale__old-price {
+  position: relative;
+  text-decoration: none;
+}
+
+.hot-sale__old-price::before,
+.hot-sale__old-price::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50px;
+  height: 0;
+  transform: rotate(18.1deg) translateY(-50%);
+  border: 2px solid var(--action-color);
+  content: "";
+}
+
+.hot-sale__old-price::after {
+  transform: rotate(-18.1deg);
+}
 
 @media screen and (min-width: 768px) {
   .hot-sale__old-price {
+    position: relative;
     order: 2;
     width: fit-content;
+    margin-bottom: 40px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .hot-sale__old-price::before,
+  .hot-sale__old-price::after {
+    width: 55px;
+  }
+}
+
+.sale__button {
+  margin: 0 auto;
+  padding-inline: 35px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: none;
+}
+
+@media screen and (min-width: 768px) {
+  .sale__button {
+    width: 310px;
   }
 }
