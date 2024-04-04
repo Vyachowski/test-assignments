@@ -311,6 +311,10 @@ img {
   color: var(--accent-color);
 }
 
+.warning-color {
+  color: var(--action-color) !important;
+}
+
 /* MAIN */
 .main {
   padding: 20px 16px;
@@ -905,7 +909,7 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
 }
 
 .modal-window {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -914,7 +918,6 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
   display: none;
   padding: 60px 20px;
   overflow: scroll;
-  min-height: 100vh;
   justify-content: center;
   align-items: flex-start;
   background-color: #00000066;
@@ -997,6 +1000,10 @@ input[name=confirmation]:checked + .sale-confirmation__label::after {
 .modal__close-button > svg {
   width: 90%;
   height: auto;
+}
+
+.modal__close-button:hover > svg {
+  stroke: #000000DD;
 }
 
 @media screen and (min-width: 768px) {
