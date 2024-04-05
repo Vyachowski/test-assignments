@@ -762,6 +762,11 @@ img {
   }
 }
 
+.text-vanish {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
 .card__discount-label {
   position: absolute;
   top: 3.5px;

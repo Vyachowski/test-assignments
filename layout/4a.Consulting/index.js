@@ -59,6 +59,26 @@ const renderTimer = (minutesLeft, secondsLeft) =>{
   }
 }
 
+const renderTariffs = (priceList = [], discountPriceList = []) => {
+  const priceElements = document.querySelectorAll('.regular-price');
+  const oldPriceElements = document.querySelectorAll('.regular-old-price');
+  const cardTitleElements = document.querySelectorAll('.card__title');
+  priceList.forEach((price, index) => {
+    cardTitleElements[index].textContent = priceList[index].name;
+    if (discountPriceList.length > 0) {
+      priceElements[index].textContent = `${discountPriceList[index].price}₽`;
+      oldPriceElements[index].textContent = `${priceList[index].price}₽`;
+    } else {
+      priceElements[index].textContent = `${priceList[index].price}₽`;
+      oldPriceElements[index].classList.add('text-vanish');
+    }
+  })
+};
+
+const renderPopupTariffs = () => {
+
+}
+
 const renderPopup = () => {
   const bodyElement = document.querySelector('body');
   const modalWindow = document.querySelector('.modal-window');
@@ -74,13 +94,13 @@ const renderPopup = () => {
 
 const app = async () => {
   const pricesLink = new URL('/subscribe/list-test', 'https://t-pay.iqfit.app');
-  const { isDiscount: discountPrices, isPopular: popupPrices, regular: regularPrices } = await getSortedPrices(pricesLink);
+  const { isDiscount: popupPrices, isPopular: discountPrices, regular: regularPrices } = await getSortedPrices(pricesLink);
   const userVisitTime = new Date();
-  // renderTariffs();
+  renderTariffs(regularPrices, discountPrices);
   const intervalId = setInterval(() => {
     const currentTime = new Date();
     const passedTime = currentTime.getTime() - userVisitTime.getTime();
-    const TIMER_DURATION = 120_000;
+    const TIMER_DURATION = 10_000;
     timeLeftInSeconds = Math.floor((TIMER_DURATION - passedTime) / 1000);
     const minutesLeft = Math.floor(timeLeftInSeconds / 60);
     const secondsLeft = timeLeftInSeconds % 60;
@@ -88,7 +108,7 @@ const app = async () => {
     if (timeLeftInSeconds === 0) {
       clearInterval(intervalId);
       renderPopup();
-      // renderTariffs();
+      renderTariffs(regularPrices);
     }
   }, 100)
 }
