@@ -76,11 +76,11 @@ const app = async () => {
   const pricesLink = new URL('/subscribe/list-test', 'https://t-pay.iqfit.app');
   const { isDiscount: discountPrices, isPopular: popupPrices, regular: regularPrices } = await getSortedPrices(pricesLink);
   const userVisitTime = new Date();
-  renderDiscountPrices();
+  // renderTariffs();
   const intervalId = setInterval(() => {
     const currentTime = new Date();
     const passedTime = currentTime.getTime() - userVisitTime.getTime();
-    const TIMER_DURATION = 1_000;
+    const TIMER_DURATION = 120_000;
     timeLeftInSeconds = Math.floor((TIMER_DURATION - passedTime) / 1000);
     const minutesLeft = Math.floor(timeLeftInSeconds / 60);
     const secondsLeft = timeLeftInSeconds % 60;
@@ -88,7 +88,7 @@ const app = async () => {
     if (timeLeftInSeconds === 0) {
       clearInterval(intervalId);
       renderPopup();
-      renderRegularPrices();
+      // renderTariffs();
     }
   }, 100)
 }
