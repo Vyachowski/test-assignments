@@ -75,8 +75,17 @@ const renderTariffs = (priceList = [], discountPriceList = []) => {
   })
 };
 
-const renderPopupTariffs = () => {
+const renderPopupTariffs = (priceList = [], popupPriceList = []) => {
+  const basicPriceList = priceList.slice(0, 3);
+  const popupDiscountPriceElements = document.querySelectorAll('.hot-sale__price');
+  const popupPriceElements = document.querySelectorAll('.hot-sale__old-price');
+  const popupTitleElements = document.querySelectorAll('.hot-sale__title');
 
+  basicPriceList.forEach((price, index) => {
+    popupTitleElements[index].textContent = priceList[index].name;
+    popupPriceElements[index].textContent = `${priceList[index].price}₽`;
+    popupDiscountPriceElements[index].textContent = `${popupPriceList[index].price}₽`;
+  })
 }
 
 const renderPopup = () => {
@@ -107,6 +116,7 @@ const app = async () => {
     renderTimer(minutesLeft, secondsLeft, intervalId);
     if (timeLeftInSeconds === 0) {
       clearInterval(intervalId);
+      renderPopupTariffs(regularPrices, popupPrices)
       renderPopup();
       renderTariffs(regularPrices);
     }
