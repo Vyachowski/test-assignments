@@ -1,0 +1,24 @@
+{
+  "name": "check-wordpress",
+  "version": "1.0.0",
+  "description": "A small command line tool to check if site was made with WordPress",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "check-wordpress": "bin/checkWordpress.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "utility",
+    "wordpress"
+  ],
+  "author": "Slava",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "jsdom": "^24.0.0"
+  }
+}
