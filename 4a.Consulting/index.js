@@ -109,7 +109,7 @@ const app = async () => {
   const intervalId = setInterval(() => {
     const currentTime = new Date();
     const passedTime = currentTime.getTime() - userVisitTime.getTime();
-    const TIMER_DURATION = 10_000;
+    const TIMER_DURATION = 120_000;
     timeLeftInSeconds = Math.floor((TIMER_DURATION - passedTime) / 1000);
     const minutesLeft = Math.floor(timeLeftInSeconds / 60);
     const secondsLeft = timeLeftInSeconds % 60;
