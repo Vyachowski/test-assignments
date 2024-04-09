@@ -1,9 +1,7 @@
 # Second assignment
 
 ## Introduction
-So now guys you are really experienced and you know a lot of JS constructions. But you may notice that something is really discomfortable.
-
-Let take a look at the example of the code from the previous lesson:
+So, now that you've gained experience and learned various JavaScript constructs, you might have noticed something inconvenient. Let's examine the code example from the previous lesson:
 
 ``` js
 // We need to multiply each number of array by different numbers
@@ -28,9 +26,9 @@ for (let i = 0; i < numbers.length; i++) {
 Do you feel that is something wrong with this code? I do! And you may remember the DRY rule (Do not repeat your self) and it is definetely violated. 
 
 ## The function – the building block of any program
-Is that any way to make piece of the code reusable? Yes, and it is caleed function.
+Is there any way to make a piece of code reusable? Yes, and it's called a function.
 
-The principle is simple – you need to declare a function (and dsescribe inside the function what do you want to do) and then call the function. Let's rewrite the code:
+The principle is simple – you declare a function (and describe inside the function what you want to do) and then call the function. Let's rewrite the code:
 
 ``` js
 function multiplyByTwo() {
@@ -48,7 +46,7 @@ Let's call it and print the result:
 console.log(multiplyByTwo());
 ```
 
-But nothing happened? What is the problem? The problem need that we performed a calculation, but how to get the result from the function? We need to return it:
+But nothing happened? What is the problem? The problem is that we performed a calculation, but how do we get the result from the function? We need to return it:
 
 ``` js
 function multiplyByTwo() {
@@ -70,9 +68,9 @@ console.log(multiplyByTwo());
 console.log(multiplyByTwo());
 ```
 
-It works! And works multiple times. But it is still many problems with our functions, it is too rigid. How could I multiply by three? Or how could I use another set of numbers to perform a calculation?
+It works! And works multiple times. But there are still many problems with our functions; it is too rigid. How could I multiply by three? Or how could I use another set of numbers to perform a calculation?
 
-Answer is simple and very convinient, we can define a parameter(s) of the function, let me show:
+The answer is simple and very convenient: we can define parameters of the function. It is like a placeholders for future variables, that will be passed to the function. Let me show you:
 
 ``` js
 function multiplyBy(numbers, multiplier) {
@@ -103,11 +101,11 @@ console.log(multiplyBy(number, 20)); // [20, 40, 60, 80, 100]
 > Task: Create your function to get a square of any number. Hints: Declaration, parameters, logic, return.
 
 ## Curly braces – important sign
-So lets revise our new instruments: Now we can declare a function, set the parameters of the function, perform some operations inside and return it back with keyword return.
+Let's revise our new instruments: Now we can declare a function, set the parameters of the function, perform some operations inside, and return it back with the keyword return.
 
-But there is one important thing about functions that you should understand and it is called scoope.
+But there is one important thing about functions that you should understand, and it is called scope.
 
-Make a guess is that code possible (tip: variable was declared twice) and what will be the output? 
+Take a guess: Is the following code possible (tip: variable was declared twice), and what will be the output?
 ``` js
 const name = 'John';
 
@@ -119,8 +117,8 @@ function getName() {
 console.log(getName()); // ?
 ```
 
-Yes, the right answer is Bill and we do not have an error! But why, as far as we now it is not allowed to declare a variable twice!
+Yes, the correct answer is "Bill," and we do not have an error! But why? As far as we know, it is not allowed to declare a variable twice!
 
-Answer is that these variables are in different scopes.
+The answer is that these variables are in different scopes.
 
 One of them is in a local
