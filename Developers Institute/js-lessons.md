@@ -8,10 +8,14 @@ We already know about expressions and variables and how to use them. Let's quick
 
 (Remind about const, let and var);
 
+<<<<<<< HEAD
 Do you have any questions about variables and expressions?
 
 ## Repetetive operations – how to make it convenient?
 For now we know how to print in the console a number or a string.
+=======
+## Repetetive operations – how to make it convenient?
+>>>>>>> refs/remotes/origin/main
 However, what if we need to print to the console, for example, all numbers from 1 to 20?
 
 Using the familiar terms, the first thing that comes to mind is to write the following code:
@@ -21,7 +25,11 @@ console.log(i);
 
 i += 1;
 console.log(i);
+<<<<<<< HEAD
 // And so on 18 more times
+=======
+// И так еще 18 раз
+>>>>>>> refs/remotes/origin/main
 ```
 
 Will this code work? Yes. Is it a good solution? Following one of the main principles in programming - DRY (Don't Repeat Yourself), and just common sense, definitely no. Moreover, if we suddenly need to print all numbers from 1 to 1_000_000_000_000, we simply physically won't be able to write such code.
