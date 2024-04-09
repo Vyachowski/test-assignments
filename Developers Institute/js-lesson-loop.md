@@ -47,5 +47,3 @@ for (let i = 0; i < 1_000_000; i++) {
   console.log("The current number is " + i) 
 }
 ```
-
-# Second assignment
