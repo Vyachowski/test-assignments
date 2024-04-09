@@ -1,4 +1,4 @@
-<!-- Let's imagine that on previous lesson we discussed expressions and variables and the group is familiar with it -->
+> Let's imagine that on previous lesson we discussed expressions and variables and the group is familiar with it
 # First assignment
 
 ## Review of previous lesson
