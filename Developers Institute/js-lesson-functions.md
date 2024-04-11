@@ -1,6 +1,7 @@
 # Second assignment
 
 ## Introduction
+
 So, now that you've gained experience and learned various JavaScript constructs, you might have noticed something inconvenient. Let's examine the code example from the previous lesson:
 
 ``` js
@@ -23,9 +24,10 @@ for (let i = 0; i < numbers.length; i++) {
 } // Result: multipliedNumbersByTwenty = [20, 40, 60, 80, 100]
 ```
 
-Do you feel that is something wrong with this code? I do! And you may remember the DRY rule (Do not repeat your self) and it is definetely violated. 
+Do you feel that is something wrong with this code? I do! And you may remember the DRY rule (Do not repeat your self) and it is definetely violated.
 
 ## The function – the building block of any program
+
 Is there any way to make a piece of code reusable? Yes, and it's called a function.
 
 The principle is simple – you declare a function (and describe inside the function what you want to do) and then call the function. Let's rewrite the code:
@@ -42,6 +44,7 @@ function multiplyByTwo() {
 ```
 
 Let's call it and print the result:
+
 ``` js
 console.log(multiplyByTwo());
 ```
@@ -62,6 +65,7 @@ function multiplyByTwo() {
 ```
 
 Let's call it again and print the result:
+
 ``` js
 console.log(multiplyByTwo());
 console.log(multiplyByTwo());
@@ -96,16 +100,18 @@ console.log(multiplyBy(number, 20)); // [20, 40, 60, 80, 100]
 
 > Important thing: In essence, arguments are the values received by the function, whereas parameters are the variables used to define the function's behavior.
 
-## Let's make your own function!
+## Let's make your own function
 
 > Task: Create your function to get a square of any number. Hints: Declaration, parameters, logic, return.
 
-## Curly braces – important sign
+## Curly braces – an important sign
+
 Let's revise our new instruments: Now we can declare a function, set the parameters of the function, perform some operations inside, and return it back with the keyword return.
 
 But there is one important thing about functions that you should understand, and it is called scope.
 
 Take a guess: Is the following code possible (tip: variable was declared twice), and what will be the output?
+
 ``` js
 const name = 'John';
 
@@ -119,6 +125,47 @@ console.log(getName()); // ?
 
 Yes, the correct answer is "Bill," and we do not have an error! But why? As far as we know, it is not allowed to declare a variable twice!
 
-The answer is that these variables are in different scopes.
+In JavaScript, variables have different scopes, which determine where in your code they are accessible or visible.
 
-One of them is in a local
+> Outer Scope: This refers to the broader context within which a variable is declared. In your example, the variable name with the value 'John' is declared outside of any function. Therefore, it is in the outer scope.
+
+> Inner Scope: This refers to a more specific context enclosed within a function. In your example, the variable name with the value 'Bill' is declared inside the function getName(). Therefore, it is in the inner scope.
+
+When JavaScript encounters a variable reference, it first looks for that variable within the current scope. If it finds it, it uses that variable. If it doesn't find the variable in the current scope, it looks in the outer scope. This process continues recursively until it reaches the global scope (outermost scope).
+
+In my example, when the getName() function is called, JavaScript looks for the variable name within the function scope first. It finds the inner variable name with the value 'Bill', so it returns that value.
+
+This mechanism allows you to have variables with the same name in different scopes without conflicts. Each variable exists only within its own scope and doesn't affect variables with the same name in other scopes.
+
+## Last, but not the least
+
+I will skip the part about naming, as you will learn it on your own, but one important thing I want to note is that a function itself is a first-class citizen. That means we can return a function from a function.
+
+### Exercise: Creating a Function that Returns a Function
+
+Write a function called createMultiplier that takes an argument multiplier. createMultiplier should return a function that takes an argument number and returns the result of multiplying number by multiplier.
+
+Example usage:
+
+``` js
+const multiplyByTwo = createMultiplier(2);
+console.log(multiplyByTwo(5)); // Expected output: 10
+
+const multiplyByTen = createMultiplier(10);
+console.log(multiplyByTen(5)); // Expected output: 50
+```
+
+Usage example:
+
+``` js
+function createMultiplier(multiplier) {
+  // Return a function that multiplies its argument by multiplier
+}
+
+// Test
+const multiplyByTwo = createMultiplier(2);
+console.log(multiplyByTwo(5)); // Expected output: 10
+
+const multiplyByTen = createMultiplier(10);
+console.log(multiplyByTen(5)); // Expected output: 50
+```
