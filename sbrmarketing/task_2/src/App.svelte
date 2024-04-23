@@ -1,47 +1,56 @@
-<script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+<script>
+  import { onMount } from 'svelte';
+  import { currencies } from "./lib/currencies.js";
+  // Определить стартовую валютную пару
+  let [ fromCurrency, toCurrency ] = ['USD', 'EUR'];
+  // При
+  onMount(() => {
+    // console.log(currencies);
+  });
 </script>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
+<main class='card'>
+  <h1>Currency converter</h1>
+  <div class='currency-card'>
+    <select class='currency-selector'>
+      {#each currencies as { code }}
+        <option selected={code === fromCurrency}>{code}</option>
+      {/each}
+    </select>
+    <label class='currency-label'>
+      <input class='currency-input' id='fromCurrency' type='number' placeholder="100" />
+    </label>
   </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
+  <div class='currency-card'>
+    <select class='currency-selector'>
+      {#each currencies as { code }}
+        <option selected={code === toCurrency}>{code}</option>
+      {/each}
+    </select>
+    <label  class='currency-label'>
+      <input class='currency-input' id='toCurrency' type='number' placeholder="100" >
+    </label>
   </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
+  .card {
+    margin: auto;
+    width: 540px;
+    height: 540px;
+    color: white;
+    background-image: linear-gradient(
+      45deg,
+      hsl(240deg 100% 20%) 0%,
+      hsl(289deg 100% 21%) 11%,
+      hsl(315deg 100% 27%) 22%,
+      hsl(329deg 100% 36%) 33%,
+      hsl(337deg 100% 43%) 44%,
+      hsl(357deg 91% 59%) 56%,
+      hsl(17deg 100% 59%) 67%,
+      hsl(34deg 100% 53%) 78%,
+      hsl(45deg 100% 50%) 89%,
+      hsl(55deg 100% 50%) 100%
+    );
   }
 </style>
