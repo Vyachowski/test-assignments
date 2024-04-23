@@ -3,23 +3,22 @@ import { encoded, translations } from './data.js'
 console.log("Let's rock")
 console.log(encoded, translations)
 
-const uniqueIdList = [];
+const uniqueIdSet = new Set();
 
 // Функция с побочными эффектами просто чтобы не разделять на две
-const generateDecodedList = (encodedList, dictionary) => {
-  const excludedKeys = ['groupId', 'service', 'formatSize', 'ca'];
+const excludedKeys = new Set(['groupId', 'service', 'formatSize', 'ca']);
 
+const generateDecodedList = (encodedList, dictionary) => {
   return encodedList.map((item) => {
     const newItem = {};
-    for (const key in item) {
-      if (!excludedKeys.includes(key)) {
-        const currentKey = item[key];
+    for (const [key, currentKey] of Object.entries(item)) {
+      if (!excludedKeys.has(key)) {
         const currentNumberKey = Number(currentKey);
         const decodedKey = dictionary[currentNumberKey];
         newItem[key] = currentKey;
         if (decodedKey || decodedKey === '') {
           newItem[key] = decodedKey;
-          if (!uniqueIdList.includes(currentNumberKey)) uniqueIdList.push(currentNumberKey);
+          if (!uniqueIdSet.has(currentNumberKey)) uniqueIdSet.add(currentNumberKey);
         }
       }
     }
@@ -30,4 +29,4 @@ const generateDecodedList = (encodedList, dictionary) => {
 const decoded = generateDecodedList(encoded, translations);
 
 console.log(decoded);
-console.log(uniqueIdList)
+console.log(uniqueIdSet);
