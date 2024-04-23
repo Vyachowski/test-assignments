@@ -6,9 +6,9 @@ console.log(encoded, translations)
 const uniqueIdSet = new Set();
 
 // Функция с побочными эффектами просто чтобы не разделять на две
-const excludedKeys = new Set(['groupId', 'service', 'formatSize', 'ca']);
-
 const generateDecodedList = (encodedList, dictionary) => {
+  const excludedKeys = new Set(['groupId', 'service', 'formatSize', 'ca']);
+
   return encodedList.map((item) => {
     const newItem = {};
     for (const [key, currentKey] of Object.entries(item)) {
