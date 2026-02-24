@@ -10,5 +10,17 @@
 type NestedArray<T> = (T | NestedArray<T>)[]
 
 export function flatten<T>(arr: NestedArray<T>): T[] {
-  throw new Error('Not implemented')
+  let result: T[] = []
+
+  if (!Array.isArray(arr)) {
+    return [arr]
+  }
+
+  for (const elem of arr) {
+    const res = flatten(elem as NestedArray<T>)
+
+    result.push(...res)
+  }
+
+  return result
 }
