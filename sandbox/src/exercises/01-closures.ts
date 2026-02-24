@@ -38,5 +38,12 @@ export interface Counter {
 }
 
 export function makeCounter(initial: number = 0): Counter {
-  throw new Error('Not implemented')
+  let counter = initial;
+
+  return ({
+    increment: () => { counter += 1 },
+    decrement: () => { counter -= 1 },
+    reset: () => counter = initial,
+    getValue: () => counter,
+  })
 }
